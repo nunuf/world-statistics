@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <script src="jquery-3.6.0.js"></script>
+  <script defer src="main.js"></script>
+  <title>World Statistics</title>
+</head>
+
+<body>
+  <!-- Title -->
+  <header>
+    <h1 class="text-center">World Statistics</h1>
+  </header>
+  <!-- Search -->
+  <div class="buttons justify-content-center col-3">
+    <button id="allBtn" class="col-3">All</button>
+    <input class="form-control text-center" type="search" placeholder="Search" />
+    <div id="btnSearch" class="search-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffd868" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+      </svg>
+    </div>
+  </div>
+  <!-- Results -->
+  <section>
+    <br/><br/>
+    <p id="numOfCountries" class="text-center fs-5"></p>
+    <p id="sumPopulation" class="text-center fs-5"></p>
+    <p id="avgPopulation" class="text-center fs-5"></p>
+    <table class="table text-center table-striped table-dark">
+      <thead>
+        <tr>
+          <th class="col-1 fs-3">Country Name</th>
+          <th class="col-1 fs-3">Number of Citizens</th>
+        </tr>
+      </thead>
+      <tbody id="countryTable" class="text-center"></tbody>
+    </table>
+    <br/><br/>
+    <table class="table text-center table-striped table-dark">
+      <thead>
+        <tr>
+          <th class="col-1 fs-3">Region</th>
+          <th class="col-1 fs-3">Number Of Countries</th>
+        </tr>
+      </thead>
+      <tbody id="regionTable"></tbody>
+    </table>
+    <br/><br/>
+    <table class="table text-center table-striped table-dark">
+      <thead>
+        <tr>
+          <th class="col-1 fs-3">Currency Name</th>
+          <th class="col-1 fs-3">Number Of Countries</th>
+        </tr>
+      </thead>
+      <tbody id="currenciesTable"></tbody>
+    </table>
+  </section>
+</body>
+
+</html>

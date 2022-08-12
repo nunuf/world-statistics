@@ -1,0 +1,39 @@
+body {
+  background-image: url(assets/images/world-gold.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+h1, p {
+  color: white;
+  font-family: cursive;
+}
+
+.buttons {
+  display: flex;
+  position: absolute;
+  right: 39%;
+}
+
+#allBtn {
+  border-radius: 20%;
+  border-color: #ffd868;
+  background-color: #ffd868;
+  width: 70px;
+  margin: 0 20px;
+}
+
+.search-btn {
+  position: absolute;
+  right: -24px;
+  top: 4px;
+  cursor: pointer;
+}
+
+.table {
+  width: 500px;
+}
+
