@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="jquery-3.6.0.js" />
 
 $(() => {
@@ -30,7 +31,7 @@ $(() => {
     }
     $('#numOfCountries').html(`Total Countries: ${counter}`);
     $('#sumPopulation').html(`Total Countries Population: ${sum}`);
-    $('#avgPopulation').html(`Average Population: ${(sum / counter).toFixed(2)}`);
+    $('#avgPopulation').html(`Average Population: ${(sum / counter).toFixed()}`);
     displayCountryTable(countries);
     displayRegionTable(countries);
     displayCurrencies(countries);
@@ -65,11 +66,12 @@ $(() => {
       if (textToSearch === '') {
         alert('Please Enter Country Name');
         return;
-      } else {
-        return await getJSON(`https://restcountries.com/v3.1/name/${textToSearch}`);
       }
+      return await getJSON(`https://restcountries.com/v3.1/name/${textToSearch}`);
     }
     catch (err) {
+      $('input[type=search]').val('');
+      err = new Error("No Country Found");
       alert(err.message);
     }
   };
